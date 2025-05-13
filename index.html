@@ -19,69 +19,122 @@
   <div class="background"></div>
 
   <div class="container">
-    <header class="logo-header">
-      <canvas id="atom-logo"></canvas>
-      <img src="./assets/img/cryptolaxy_logo_text.png" alt="CRYPTOLAXY Logo" class="text-logo" />
+    <!-- Sticky Header -->
+    <header class="header">
+      <div class="logo-header">
+        <canvas id="atom-logo"></canvas>
+      </div>
+
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#section1">market overview</a></li>
+          <li><a href="#section2">token launch</a></li>
+          <li><a href="#section3">events recap</a></li>
+          <li><a href="#section4">trending projects</a></li>
+          <li><a href="#section5">upcoming events</a></li>
+          <li><a href="#contacts">contacts</a></li>
+        </ul>
+      </nav>
+
+      <div class="hamburger" id="hamburger">&#9776;</div>
     </header>
 
-    <main>
-      <h1>Live Crypto Prices</h1>
-      <div class="cards">
-        <div class="card">
-          <h2>Bitcoin (BTC)</h2>
-          <p id="btc">Loading...</p>
+    <section class="price-ticker">
+      <div class="ticker-wrapper">
+        <div class="ticker-content" id="ticker-content">
+          <!-- Tokens inserted by JS -->
         </div>
-        <div class="card">
-          <h2>Ethereum (ETH)</h2>
-          <p id="eth">Loading...</p>
-        </div>
-        <div class="card">
-          <h2>Solana (SOL)</h2>
-          <p id="sol">Loading...</p>
+        <div class="ticker-content" id="ticker-content-clone">
+          <!-- Cloned row inserted by JS -->
         </div>
       </div>
+    </section>
 
-      <div class="marketcap">
-        <h2>Total Market Cap:</h2>
-        <p id="market-cap">Loading...</p>
-      </div>
+    <main>
+      <section class="main-intro">
+        <h2>Cryptolaxy is the one-stop point where you can…</h2>
+      </section>
+
+      <section class="post-section">
+        <!-- Post 1 -->
+        <div class="post-row" id="section1">
+          <img src="./assets/img/posts/market_daily_overview.png" alt="Market Overview" class="post-img size-55">
+          <div class="post-text">…be aware of the crypto market’s key metrics, trending projects and tokens, and a brief
+            overview of the DeFi and NFT sectors…</div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="post-row reverse" id="section2">
+          <img src="./assets/img/posts/token_launch.png" alt="Token Launch" class="post-img size-75">
+          <div class="post-text">…be among the first to know about the upcoming hottest tokens launch and airdrops …
+          </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="post-row" id="section3">
+          <img src="./assets/img/posts/recent_news_events.png" alt="Events Recap" class="post-img size-55">
+          <div class="post-text">…check what happened on the market within the last day if you missed it…</div>
+        </div>
+
+        <!-- Post 4 -->
+        <div class="post-row reverse" id="section4">
+          <img src="./assets/img/posts/top_projects.png" alt="Top Projects" class="post-img size-80">
+          <div class="post-text">…get technical and fundamental analytics about top projects in different segments of
+            the crypto market…</div>
+        </div>
+
+        <!-- Post 5 -->
+        <div class="post-row" id="section5">
+          <img src="./assets/img/posts/next_weeks_crypto_events.png" alt="Upcoming Events" class="post-img size-80">
+          <div class="post-text">…monitor information about upcoming significant events in the blockchain and crypto
+            industry…</div>
+        </div>
+      </section>
+
     </main>
 
-    <footer class="footer-section">
-      <div class="footer-left">
-        <h3>Cryptolaxy in media</h3>
-        <div class="social-icons">
-          <a href="https://x.com/Cryptolaxy" target="_blank">
-            <img src="./assets/img/x.png" alt="X" />
-          </a>
-          <a href="https://www.instagram.com/cryptolaxy/" target="_blank">
-            <img src="./assets/img/instagram.png" alt="Instagram" />
-          </a>
-          <a href="https://t.me/cryptolaxy" target="_blank">
-            <img src="./assets/img/telegram.png" alt="Telegram" />
-          </a>
+    <footer class="footer-section" id="contacts">
+      <div class="footer-top">
+        <div class="footer-left">
+          <span>join us:</span>
+          <div class="social-icons">
+            <a href="https://x.com/Cryptolaxy" target="_blank"><img src="./assets/img/social/x.png" alt="X" /></a>
+            <a href="https://instagram.com/cryptolaxy" target="_blank"><img src="./assets/img/social/instagram.png"
+                alt="Instagram" /></a>
+            <a href="https://t.me/cryptolaxy" target="_blank"><img src="./assets/img/social/telegram.png"
+                alt="Telegram" /></a>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <span>contact us:</span>
+          <div class="contact-info">
+            <div class="contact-row">
+              <img src="./assets/img/social/telegram.png" alt="Telegram">
+              <span>@CryptolaxyAdmin</span>
+            </div>
+            <div class="contact-row">
+              <img src="./assets/img/social/email.png" alt="Email">
+              <span>cryptolaxyio@gmail.com</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="footer-right">
-        <h3>Contact us</h3>
-        <div class="contact-info">
-          <div class="contact-row">
-            <img src="./assets/img/telegram.png" alt="Telegram" />
-            <span>@CryptolaxyAdmin</span>
-          </div>
-          <div class="contact-row">
-            <img src="./assets/img/email.png" alt="Email" />
-            <span>cryptolaxyio@gmail.com</span>
-          </div>
-        </div>
+      <div class="footer-bottom">
+        <span>2024 © Cryptolaxy. All Rights Reserved.</span>
       </div>
     </footer>
 
   </div>
 
+  <button id="scrollTopBtn" title="to the top">
+    <img src="./assets/img/arrow_up.png" alt="Scroll to top" />
+  </button>
+
   <script src="script.js"></script>
   <script src="animation.js"></script>
+
 </body>
 
 </html>
